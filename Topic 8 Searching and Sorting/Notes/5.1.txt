@@ -1,0 +1,27 @@
+Bucket Sort O(n)
+    1. An array of N elements to sort
+    2. Create an array of bucket of size N.
+    3. Find the range (0 to C) of numbers by finding the max.
+    4. The range of each bucket array slot is determine bt range/N. [0,range)
+    5. Put numbers into the bucket array into corresponding range.
+    6. Do insertion sort on bucket that has two or more elements. 
+        - Stats about it
+            36% 1 or less
+            73% 2 or less
+            91% 3 or less
+            98% 4 or less
+            99.5% 5 or less
+    
+Radix Sort O(n) for time and space
+    - The radix or base is the number of unique digits, including the digit zero, used to represent numbers. 
+      For example, for the decimal system the radix is ten, because it uses the ten digits from 0 through 9. 
+    
+    1. Create an array of bucket that has size of the radix(base 10 has size 10, base 2 has size 2)
+    2. Values of the Least sig digit determines the subscript to put into
+    3. Check second to least sig digit and so on
+    4. Copy elements back to original array by the order they added to the last bucket array
+       (bucket array of bit 3 in case of 4 bit binary)
+
+Selection(finding Kth element in the sorted array but the array is not sorted currently) O(logn)
+    1. Find a pivot point and partition the array into 2.
+    2. If pivot is k, return. Othewise if k<pivot, partition on the left side, and if k>pivot, partition on the right.

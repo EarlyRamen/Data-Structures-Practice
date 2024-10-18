@@ -1,0 +1,15 @@
+Open Addressing(aka Separate Chaining): Array of Buckets 
+
+Loading Factor: we allows how much the the array can be filled up before we resize; it is a ratio(ie 0.75N)
+
+Probing: When collision happened, probe forward for the next available space. To find an element, we go to the same 
+subscript and probe forward (compare keys to find the element). Status like "unused" space allow us to keep probing. We
+stop when we encounter a "empty" space where there was an item there but removed. 
+
+i = h(k)
+Linear Probing: A[(i+1) mod n]. This process will continue until we find an empty bucket that can accept the new entry.
+
+Quadratic Probing: A[(i + f(j)) mod n], for j = 0, 1, 2, ..., where f(j) = j^2, until finding an empty bucket.
+
+Double Hashing: A[(i + f(j)) mod n] for j=1,2,3... where f(j)=j*h'(k).
+                A common choice of h'(k)=q-(k mod q) for some prime number q<n

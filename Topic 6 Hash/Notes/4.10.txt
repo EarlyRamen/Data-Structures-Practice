@@ -1,0 +1,35 @@
+Hash Set/map/table
+    -Set, each element has to be unique because the value of the element identifies it. 
+    -Map stores key value pair. Each element can have the same value but the key need to be unique. 
+
+Hash Function
+    -The hash function is a function that takes a key and returns an index into the hash table.
+    -H(key) -> subscript
+    -H(m)->hm, it is impossible to have H(hm)->m
+    -If n = m, H(n) = H(m)
+
+    -Hash function is made of two functions
+        -H1(k) -> hash code (int)
+        -H2(hc) -> subscript
+        -Users will provide H1
+
+    Collision
+        -If i!=k, but H(i)=H(j), then we have a collision. 
+
+    Examples of h2
+    Compression:  
+        -Division: h2(h1(k)) = abs(h1(k)) % n (size being a prime can help to reduce collision)
+            -negative & 0x7fffffff returns positive
+        -MAD method: h2(y) = ( (ay + b) mod p) mod n 
+            (p is prime > n and a, b are chosen at random from the interval [0,p-1], with a>0)
+
+    Examples of Hash 1
+        -h -> size_t
+        -h(int k) return k;
+        -h(long int k) return k;
+        -h(double k) use union
+
+        -String, use Horner's method 
+            int hc{};
+            for each char c in String
+                hc += hc*C + code(c);

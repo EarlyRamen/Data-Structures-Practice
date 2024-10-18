@@ -1,0 +1,32 @@
+Splay Trees 
+    - BST
+    - much faster than all BST when freg. accessing the same elements
+    - Cache managemnt systems
+    - Crypto  
+    - Like AVL, rotations after Add, Remove, Find
+
+Def. Splay Tree is a BST that does NOT self balance. 
+     Access if a particular Node, X, becomes the root of the tree.
+     To optimeize Temperal Locality 
+        -Temperal refers to timing
+        -Spactial refers to Location
+
+Terms
+    - Zig: One rotation for adding entry 
+    - Zig-Zig: One way rotations all the way to the top for adding entry
+    - Zig-Zag: Init rotation is different from the rest of the rotations all the way to the top. 
+    - Amortized: average worst case analysis 
+
+M-way Search Tree
+    - each node can have at most m children
+    - each non-leaf node must have at least 2 children
+    - each node can have up to m-1 keys
+    - The nodes keys k1<k2<k3<k4....
+    - Promote and seperate by bias if a node is out of space
+
+2-4 Tree
+    - m-way seach tree
+    - each non-leaf node must have at least 2 children
+    - A node can have up to 4 childrens
+    - each node can have 3 keys
+    - All levels are at the same depth

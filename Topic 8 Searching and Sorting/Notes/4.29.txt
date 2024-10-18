@@ -1,0 +1,71 @@
+Insertion Sort
+    - O(n^2) like bubble sort and selection sort
+
+Sorting in O(nlogn)
+    - Merge, quick, heap
+
+1. mergeSort
+    mergeSort(array, start, end)
+    {
+        if(start>=end)
+            return;
+        mid=(start+end)/2
+        mergeSort(array, start, mid)
+        mergeSort(array, mid+1, end)
+        merge(array, start, mid, end)
+    }
+    - create a tmp array in public function and pass into the private recursive function
+
+2. QucikSort
+    QucikSort(array, start, end)
+    {
+        if(start>=end) then return
+        pivot point = partition(array, start, end)
+        QuickSort(array, start, pivot-1)
+        QuickSort(array, pivot+1, end)
+    }
+
+    Partition //code at radix sort, sorter.h
+    {
+        find a pivot value
+            - the last value could be a good pivot point 
+            - i only goes up to N-2
+            - Using a pointer to start and a pointer to the end, traverse the array by start pointer and compare to
+              pivot value. Once find a value greater than pivot value, start pointer stays there. If a value less than
+              pivot vlaue is found after, swap array[i] and the value at start pointer. After i=n-2, swap the end pointer
+              with start pointer.
+
+        move all values less or equal than pivot to left
+        move all values greater than pivot to right
+    }
+
+3. Heap Sort
+    - Put in heap order
+    - remove the root 
+    - max heap gives ascending order
+    - min heao gives descending order
+
+
+Sorting in O(n)
+    - Counting Sort O(n+k) = O(n) when k is small
+    - Bucket Sort
+
+    - Stable Sorting
+        - tends to sort alike elements in the same order as they were in the unsorted array.
+
+    1. Counting Sort
+        - make sure values are in a range of int
+        - make an array of the number of occurance of value
+        - sort the array according to the occurance
+
+        Counting Sort with objects, stable approach
+            - make an array of the number of occurance of value
+            - overwrite the number of occurance with the sum of the previous slot plus current slot
+            - scan backward using the original array. Search through the counting array and use occurance-1 as 
+              the subscript for the final array.
+    
+    2. Bucket Sort
+        - array of bucket 
+        - Most sig digit of the value determines the subscript to put into
+        - number of bucket is determine by most number of digit
+

@@ -1,0 +1,1 @@
+Skiplist - probabilistic data structure; linked list with levels
