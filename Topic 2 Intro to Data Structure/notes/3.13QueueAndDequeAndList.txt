@@ -1,0 +1,25 @@
+ADT Queue(Ordered), FIFO(first in first out)
+    -enqueue(): Adds an item in the back of the queue
+    -dequeue(): remove an item from the front of the queue 
+    -front(): return but not remove the item at the front of the queue
+    -empty(): returns true if the queue is empty, false otherwise
+
+ADT Deque
+    -enqueueBack(): add item to the back of the Deque
+    -enqueueFront(): adds an item to the front of the Deque
+    -dequeueFront(): 
+    -dequeueBack():
+    -front()
+    -back()
+    -empty()
+
+ADT List
+    -add(): add an item to the end of the list
+    -insert(): insert an item at a given position in the list
+    -remove(): remove the first item in the list
+    -remove(postion): removes an item in the given postion in the list
+    -empty()
+    -size()
+    -clear()
+    -get(): gets an item at a postion in the list
+    -contains(): returns the first postion of the item if it existed in the list, and -1 if it doesn't 

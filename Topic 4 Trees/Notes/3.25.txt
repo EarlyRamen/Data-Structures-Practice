@@ -1,0 +1,8 @@
+Trees
+    -Acyclic graph
+    -Height of a binar tree is given by h=log2(n+1)
+
+    -Binary Search Tree
+        -Binary Tree
+        -all nodes in a left subtree are all less than or equal to its root
+        -all nodes in a right subtree are all greater than its root

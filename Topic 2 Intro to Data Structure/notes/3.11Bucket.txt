@@ -1,0 +1,18 @@
+Data Structure
+    -ADT is stand for Abstract Data Type
+    -Struct with two or more elements is a data structure
+    -Collection is also called containers
+    -There are two types of collection: ordered(like Stack LIFO) and unordered 
+
+Unordered Data Structure
+    -Bag(Bucket)
+
+Bucket ADT:
+    -Add: adds an item to the bucket
+    -Remove: removes and returns an item
+    -remove Item: removes one or more of a specific item 
+    -empty
+    -size: return #of items
+    -Contains: checks membership, return true if collection contains an item and false otherwise 
+    -clear: removes all item 
+    -to Array: returns a array of all items

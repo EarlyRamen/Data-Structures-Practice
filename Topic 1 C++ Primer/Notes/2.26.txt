@@ -1,0 +1,21 @@
+Stage of Complier
+    1.Preprocessiing
+        expanded source code go in stage 2.
+        To check for output, use:
+            g++ -E -o test.e test.cpp
+
+    2.Complation
+        Checking for syntax error and optimize
+        Then output Assembly Language to stage 3
+        To check for output, use:
+            g++ -S -o test.asm test.cpp
+
+    3.Assembler
+        output object(machine) code
+        To check for output, use:
+            g++ -c test.cpp
+
+    4.Linking
+        link funtions together
+        output executable file
+            g++ -g(bulid with debug) -o test.out test.cpp

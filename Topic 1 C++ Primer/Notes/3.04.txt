@@ -1,0 +1,35 @@
+1. Control structure
+    1. If
+        Excute the statment if true, exit if false
+    2. If-else
+        Excute s1 if true, else excute s2 if false
+    3. While
+        Test true or false first, if true, s1 is excuted and go back to the test condition. If false, while loop is exit.
+    4.do-while 
+        Statment is first excuted then go into test condition. If true, s1 is excuted again and go back to test
+        condition. If false, the loop is exit. 
+
+2. Functions
+    For Messaging:
+        1. Primitive 
+            Pass by value unless the formal parameter is supposed to change the actual parameter. 
+            No improvement when pass by reference. 
+
+        2. Objects 
+            Always get passed by reference. Always by const Ref if the actual parameter should not be changed
+
+3. 
+Bit shift operator << and >>
+    shift left by n bits, multiply by 2^not 
+    shify right by n bits, divide 2^n
+
+Bitwise operator 
+    and &, or |, exclusive-or ^
+    The bitwise exclusive OR operator ( ^ ) compares each bit of its first operand to the corresponding bit 
+    of its second operand. If the bit in one of the operands is 0 and the bit in the other operand is 1, 
+    the corresponding result bit is set to 1. Otherwise, the corresponding result bit is set to 0.
+
+4. Pointer
+    int i{5};
+    int *j{&i}; //Alwyas 8 bytes for the pointer(address).  
+        4 bytes away from i to *j for the address. 

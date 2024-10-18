@@ -1,0 +1,18 @@
+1. Stake(Ordered data structure)
+    a. Last In First Out(LIFO)
+        Ex. Push(10), Push(20), Push(30). If you want to remove a item, 30 will be the first to 
+            remove(on top of the stake)
+    b. Operator
+        push():add to top
+        pop():remove from top
+        peek():return the top
+        empty():return true if empty or false otherwise    
+
+2. Memory(0-2^64 bit)
+    Top:Call Stack(store functions that are excuting)
+    Bottom:Heap(store objects created by new keyword)
+           BSS(store global uninitialized data)
+           Data section(fixed size, global initialized data)
+           Text section(read only, fixed size)
+
+    Exe has text, data and BSS section. 

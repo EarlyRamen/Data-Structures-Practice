@@ -1,0 +1,23 @@
+Asymptotic Notation
+    -Big O()
+        -Worst-Case Estimate; Does not contain constant
+        f(n)=2n+cn
+        g(n)=n
+        f(n)=O(n)
+
+        Let f(n) and g(n) be functions that map to some non-negative output. 
+        -We say that f(n)=O(c*(g(n))) if there is a constant c>0 and an integer constant n0>1 that f(n) is less or equal to
+        c*g(n) for all n>=n0. 
+
+
+    -Big Omega()
+        -Best Case
+         Let f(n) and g(n) be functions that map to some non-negative output. 
+        -We say that f(n)=Omega(c*(g(n))) if there is a constant c>0 and an integer constant n0>1 that f(n) is greater or 
+        equal to c*g(n) for all n>=n0. 
+
+
+    -Big Theta()
+        -Average Case 
+
+    

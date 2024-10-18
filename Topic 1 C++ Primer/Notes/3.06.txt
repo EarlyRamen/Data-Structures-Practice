@@ -1,0 +1,39 @@
+1. Inheritance
+        1. Public Inheritance makes public members of the base class public in the derived class, 
+        and the protected members of the base class remain protected in the derived class.
+
+        2. Protected Inheritance makes the public and protected members of the base class protected in the derived class.
+
+        3. Private Inheritance makes the public and protected members of the base class private in the derived class.
+
+        4. Private members of the base class are inaccessible to the derived class.
+
+        5. Everything in struct is public unless otherwise stated. 
+
+        syntax:
+        class dervied : public/private/protected base{
+
+        }
+
+2. "This" Pointer 
+    *(this).speak(); is the same as this->speak(); where "this" is the pointer of the object
+-----------------------------------------------------------------------------------------------
+
+3. Virtual Keyword
+
+virtual std::string speak() const=0 
+    "=0" makes this function a pure virtual. So the Pet class is now abstract. Constructor of that class is 
+    no longer allowed. 
+
+class Pet{
+    public:
+        Pet(const std::string&);             //Virtual keyword is needed when the function is meant to be overridden in sub-class
+        virtual std::string speak() const=0; //"virtual" is only needed in the header file as a declaration, "const"
+        std::string getName() const;         //is both declaration and def, so it is needed in both header and cpp file. 
+                                             //"const" is needed when function is not meant to change any data members. 
+    private:
+        std::string name;
+};
+
+4. Templates
+    A blueprint of classes
