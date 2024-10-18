@@ -1,0 +1,4 @@
+Searching
+    - DFS, BFS, unifrom cost are uninformed search
+    - A* is a informed search
+    - Heuristic approach is a estimated approach

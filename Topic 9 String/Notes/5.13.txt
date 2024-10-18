@@ -1,0 +1,44 @@
+Huffman Compression
+-------------------
+Let S be a symbol read from uncompressed input
+    S' be a symbol read from the table lookup or Table[s]
+    WS working string
+    AS avg. string
+
+WS = E
+while not EOF
+    read S
+    lookup S' from S
+    write S' to output
+    if AS exists in table
+        WS = AS
+    else add AS to table
+        WS = S'
+    end if 
+end while
+
+
+The "Trie" data structure
+--------------------------
+- The Trie data structure is a tree-like data structure used for storing a dynamic set of strings. 
+- A Trie data structure consists of nodes connected by edges. Each node represents a character or a part of a string. 
+    The root node, the starting point of the Trie, represents an empty string. 
+    Each edge emanating from a node signifies a specific character. 
+    The path from the root to a node represents the prefix of a string stored in the Trie.
+
+node
+{
+    node*{symbol};
+    bool isterminal;
+}
+
+- Remove operation: Set isTerminal to false if the terminal node is internal. If Terminal node is a leaf node,
+                    keep deleting until non-leaf or the terminal node of another word. 
+
+
+Dynamic Programing 
+------------------
+    - Divide and conquer technique that is usually applied to optimization problems
+    - Given a hard problem (exponential)
+        if the problem can be decomposed into sub-problems which repeat in some way, then we can design 
+        a technique to solve it faster 

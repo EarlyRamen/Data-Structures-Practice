@@ -1,0 +1,38 @@
+Longest Common Subsequence
+    - ie, {GACT} 
+    - S = {GTCCACA}
+    - T = {TCACA}
+    - Subcript must be in their original consecutive order
+    - Common subsequence is any char that they have in common(does not have to consecutive)
+    - subsequence of S and T = {TCACA}
+
+LCS(Seq S, Seq T)
+start
+    Let m = length(S)
+    Let n = length(T)
+    Let S' = substring(S, n-1)
+    Let T' = substring(T, n-1)
+    if m = 0 or n = 0 Then
+        return 0
+    if S[m-1] = T[n-1] Then
+        return 1 + LCS(S', T')
+    return MAX(LCS(S,T'), LCS(S',T) )
+
+
+DP approach of the LCS
+if s[i]=t[j]
+    LCS[i][j] = LCS[i-1][j-1]
+else
+    LCS[i][j] = MAX(LCS[i][j-1], LCS[i-1][j])
+
+O(n*m) n=|s|, m=|t|
+-------------------------------------------------
+
+0/1 KnapSack
+- Given N items where each item has some weight and profit associated with it and also given a bag with capacity W, 
+[i.e., the bag can hold at most W weight in it]. The task is to put the items into the bag such that the sum of profits 
+associated with them is the maximum possible.
+- DP/table approach has O(n^2)
+
+v[i][w] = max(V[i-1][w], V[i-1][w-wi])
+          or V[i-1][w] when item i does not fit

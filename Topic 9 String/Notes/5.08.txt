@@ -1,0 +1,16 @@
+Lempel-Ziv Compression
+----------------------------
+Let WS = working set(string)
+    C = current char
+    AS = Augmented string
+
+Algo
+    1. C = read next char
+    2. AS = WS + C
+    3.
+        if AS is in table
+            WS = AS
+        else 
+            Add AS to table 
+            output WS
+            AS = C

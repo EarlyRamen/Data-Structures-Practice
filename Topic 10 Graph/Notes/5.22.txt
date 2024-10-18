@@ -1,0 +1,13 @@
+Min Spanning Tree
+    - Prim's
+    - Kruskals
+    - Remove loop and double edges before applying 
+
+Shortest Path
+    - Dijkstra
+        - Step Cost: weight to traverse an edge
+        - Path Cost: Sum of step costs along a path from the source to every other node
+
+        Let P(u) be the path cost from the source to vertex u
+
+        P(u) + C(u,v) < P(v) than P(v) = P(u) + C(u,v)
